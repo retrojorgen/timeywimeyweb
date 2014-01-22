@@ -1,0 +1,136 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+@import "compass";
+@import "animation";
+@import "_base";
+
+
+$otherThanPhone: "only screen and (min-width : 602px)";
+$otherThanPhoneAndIpad: "only screen and (min-width : 1025px)";
+
+@import url(http://fonts.googleapis.com/css?family=Exo+2:100,400);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+
+
+
+$regularFont : 'Exo 2';
+$thinFont : 'Vollkorn';
+
+@include keying(twinkle) {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: $regularFont;
+  background-color: rgba(0,0,0,1);
+  color: white;
+  background: {
+    image: url(../images/background.jpg);
+  }
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+}
+
+div, button, ul, li,h1,h2, input, textarea {
+  @include box-sizing(border-box);
+}
+
+.app {
+  max-width: 100%;
+}
+
+.twinkle {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background: {
+    image: url(../images/star.png);
+    size: 100%;
+  }
+  @include animation(twinkle 2s infinite linear);
+}
+
+.page-content {
+  position: absolute;
+  max-width: 600px;
+  width: 600px;
+  left: 50%;
+  top: 0;
+  margin-left: -300px;
+
+  .full {
+
+  }
+
+  .half {
+    width: 49.5%;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+  }
+
+  h1 {
+    font-family: $regularFont;
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+  }
+  h2 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+  }
+  p {
+
+  }
+  #contact-form {
+    .name,
+    .email,
+    .message {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 20px;
+      margin-bottom: 10px;
+      border: 0;
+      background-color: rgba(0,0,0,0.2);
+    }
+    .message {
+      min-height: 100px;
+      padding: 10px;
+    }
+    .submit {
+      background-color: rgba(0,0,0,0.2);
+      padding: 10px;
+      border: 1px solid white;
+      color: white;
+      font-size: 20px;
+      font-family: $regularFont;
+      font-weight: 100;
+      border-radius: 5px;
+    }
+  }
+}

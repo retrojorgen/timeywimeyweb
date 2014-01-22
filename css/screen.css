@@ -1,0 +1,176 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:100,400);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@-webkit-keyframes twinkle {
+  /* line 24, ../scss/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 28, ../scss/screen.scss */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 32, ../scss/screen.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes twinkle {
+  /* line 24, ../scss/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 28, ../scss/screen.scss */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 32, ../scss/screen.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes twinkle {
+  /* line 24, ../scss/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 28, ../scss/screen.scss */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 32, ../scss/screen.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle {
+  /* line 24, ../scss/screen.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 28, ../scss/screen.scss */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 32, ../scss/screen.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 38, ../scss/screen.scss */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Exo 2";
+  background-color: black;
+  color: white;
+  background-image: url(../images/background.jpg);
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+}
+
+/* line 55, ../scss/screen.scss */
+div, button, ul, li, h1, h2, input, textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 59, ../scss/screen.scss */
+.app {
+  max-width: 100%;
+}
+
+/* line 63, ../scss/screen.scss */
+.twinkle {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-image: url(../images/star.png);
+  background-size: 100%;
+  -webkit-animation: twinkle 2s infinite linear;
+  -moz-animation: twinkle 2s infinite linear;
+  -ms-animation: twinkle 2s infinite linear;
+  -o-animation: twinkle 2s infinite linear;
+  animation: twinkle 2s infinite linear;
+}
+
+/* line 74, ../scss/screen.scss */
+.page-content {
+  position: absolute;
+  max-width: 600px;
+  width: 600px;
+  left: 50%;
+  top: 0;
+  margin-left: -300px;
+}
+/* line 86, ../scss/screen.scss */
+.page-content .half {
+  width: 49.5%;
+  display: inline-block;
+  padding: 10px;
+  vertical-align: top;
+}
+/* line 93, ../scss/screen.scss */
+.page-content h1 {
+  font-family: "Exo 2";
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+/* line 100, ../scss/screen.scss */
+.page-content h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+}
+/* line 112, ../scss/screen.scss */
+.page-content #contact-form .name,
+.page-content #contact-form .email,
+.page-content #contact-form .message {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* line 121, ../scss/screen.scss */
+.page-content #contact-form .message {
+  min-height: 100px;
+  padding: 10px;
+}
+/* line 125, ../scss/screen.scss */
+.page-content #contact-form .submit {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border: 1px solid white;
+  color: white;
+  font-size: 20px;
+  font-family: "Exo 2";
+  font-weight: 100;
+  border-radius: 5px;
+}

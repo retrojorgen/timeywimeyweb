@@ -65,19 +65,45 @@ div, button, ul, li,h1,h2, input, textarea {
   width: 17px;
   height: 17px;
   background: {
-    image: url(../images/star.png);
+    color: #b193ff;
     size: 100%;
   }
-  @include animation(twinkle 2s infinite linear);
+  @include filter(blur(1px));
+  border-radius: 50%;
+  @include animation(twinkle 3s infinite linear);
+  &:after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 160%;
+    left: 50%;
+    margin-left: -5%;
+    top: -30%;
+    background: {
+      color: #b193ff;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 160%;
+    height: 10%;
+    left: -30%;
+    margin-left: -5%;
+    top: 50%;
+    margin-top: -5%;
+    background: {
+      color: #b193ff;
+    }
+  }
 }
 
 .page-content {
   position: absolute;
-  max-width: 600px;
-  width: 600px;
+  width: 80%;
   left: 50%;
   top: 0;
-  margin-left: -300px;
+  margin-left: -40%;
 
   .full {
 

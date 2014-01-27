@@ -7,7 +7,7 @@ var starRunner = function(time) {
 
     Star = function() {
         setTimeout(function() {
-          var randomSize = randomFromInterval(1,10);
+          var randomSize = randomFromInterval(1,5);
               star = $('<div>')
                 .addClass('twinkle')
                 .css({

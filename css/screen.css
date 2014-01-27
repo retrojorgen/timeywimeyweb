@@ -106,32 +106,58 @@ div, button, ul, li, h1, h2, input, textarea {
   position: absolute;
   width: 17px;
   height: 17px;
-  background-image: url(../images/star.png);
+  background-color: #b193ff;
   background-size: 100%;
-  -webkit-animation: twinkle 2s infinite linear;
-  -moz-animation: twinkle 2s infinite linear;
-  -ms-animation: twinkle 2s infinite linear;
-  -o-animation: twinkle 2s infinite linear;
-  animation: twinkle 2s infinite linear;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  filter: blur(1px);
+  border-radius: 50%;
+  -webkit-animation: twinkle 3s infinite linear;
+  -moz-animation: twinkle 3s infinite linear;
+  -ms-animation: twinkle 3s infinite linear;
+  -o-animation: twinkle 3s infinite linear;
+  animation: twinkle 3s infinite linear;
 }
-
 /* line 74, ../scss/screen.scss */
-.page-content {
+.twinkle:after {
+  content: "";
   position: absolute;
-  max-width: 600px;
-  width: 600px;
+  width: 10%;
+  height: 160%;
   left: 50%;
-  top: 0;
-  margin-left: -300px;
+  margin-left: -5%;
+  top: -30%;
+  background-color: #b193ff;
 }
 /* line 86, ../scss/screen.scss */
+.twinkle:before {
+  content: "";
+  position: absolute;
+  width: 160%;
+  height: 10%;
+  left: -30%;
+  margin-left: -5%;
+  top: 50%;
+  margin-top: -5%;
+  background-color: #b193ff;
+}
+
+/* line 101, ../scss/screen.scss */
+.page-content {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 0;
+  margin-left: -40%;
+}
+/* line 112, ../scss/screen.scss */
 .page-content .half {
   width: 49.5%;
   display: inline-block;
   padding: 10px;
   vertical-align: top;
 }
-/* line 93, ../scss/screen.scss */
+/* line 119, ../scss/screen.scss */
 .page-content h1 {
   font-family: "Exo 2";
   font-weight: 100;
@@ -139,14 +165,14 @@ div, button, ul, li, h1, h2, input, textarea {
   text-transform: uppercase;
   font-size: 50px;
 }
-/* line 100, ../scss/screen.scss */
+/* line 126, ../scss/screen.scss */
 .page-content h2 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 20px;
   text-align: center;
 }
-/* line 112, ../scss/screen.scss */
+/* line 138, ../scss/screen.scss */
 .page-content #contact-form .name,
 .page-content #contact-form .email,
 .page-content #contact-form .message {
@@ -158,12 +184,12 @@ div, button, ul, li, h1, h2, input, textarea {
   border: 0;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 121, ../scss/screen.scss */
+/* line 147, ../scss/screen.scss */
 .page-content #contact-form .message {
   min-height: 100px;
   padding: 10px;
 }
-/* line 125, ../scss/screen.scss */
+/* line 151, ../scss/screen.scss */
 .page-content #contact-form .submit {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 10px;
